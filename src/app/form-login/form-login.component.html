@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10 mx-auto my-3 border border-2 rounded-2">
+      <div class="row g-3 align-items-center justify-content-center p-2">
+        <div class="col-auto">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              [(ngModel)]="email"
+              #status
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="input-group-text">
+            <label class="me-3">Status</label>
+            <input
+              class="form-check-input mt-0"
+              type="checkbox"
+              aria-label="Checkbox for following text input"
+              #mycheckbox
+            />
+          </div>
+        </div>
+        <div class="col-auto">
+          <button (click)="addUser()" class="btn btn-success">Add user</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="error" class="alert alert-warning w-75 mx-auto" role="alert">
+    <h4 class="alert-heading">Alert</h4>
+    <p>Compila email</p>
+    <hr />
+    <p class="mb-0"></p>
+  </div>
+</div>

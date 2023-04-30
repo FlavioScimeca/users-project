@@ -1,0 +1,14 @@
+<div class="card p-2 mt-2">
+  <h2>Email : {{ user.email }}</h2>
+  <p>
+    Status :
+    <span class="p-1" [ngClass]="user.status ? 'bg-success' : 'bg-danger'">{{
+      user.status
+    }}</span>
+  </p>
+  <p>
+    Changes
+    <span class="p-1 bg-info rounded-circle">{{ user.changes }}</span>
+  </p>
+  <div (click)="onChangeStatus()" class="btn btn-outline-warning">Change</div>
+</div>

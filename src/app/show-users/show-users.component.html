@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row gap-2 justify-content-center">
+    <div class="col col-md-5">
+      <h3 class="text-center">User False</h3>
+      <div *ngFor="let user of userListFalse">
+        <app-card-user [user]="user"></app-card-user>
+      </div>
+    </div>
+
+    <div class="col col-md-5">
+      <h3 class="text-center">User True</h3>
+      <div *ngFor="let user of userListTrue">
+        <app-card-user [user]="user"></app-card-user>
+      </div>
+    </div>
+  </div>
+</div>
